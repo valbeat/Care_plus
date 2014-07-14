@@ -1,0 +1,92 @@
+/*===============
+	Import
+=================*/
+@import url("reset.css");
+@import url("common.css");
+/*================
+	media screen
+==================*/
+@media screen and (max-width:590px){
+img {
+    max-width: 100%;
+    height: auto;
+    width/***/:auto;　
+}
+/*----------------
+	modal
+------------------*/
+#modal {
+	padding: 50px;
+	max-width:90%;
+	text-align:center;
+	background-color:#ff9900;
+	text-shadow:-1px -1px #ffbd59,1px 1px #FF6600;
+	font-size:24px;
+	color:#4d4444;
+	display:none;
+	border:solid 2px;
+}
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+header{
+	text-align:center;
+}
+#auth {
+	text-decoration: none;
+}
+#authButton {
+	width:100%;
+	padding:20px;
+	margin-top:30px;
+	background: url(../img/bg/buttonbg.jpg) #ff9900;
+	-moz-box-shadow: 0px 0px 5px #ffbd59;
+	-webkit-box-shadow: 0px 0px 5px #ffbd59;
+	box-shadow:0px 0px 5px #ffbd59;
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration:1s;
+	-webkit-transition-delay:0s;
+	-webkit-transition-timing-function: ease;
+}
+#authButton:hover {
+	opacity:0.5;
+	}
+#authButton p {
+	font-size: 36px;
+	text-shadow:-1px -1px #ffbd59,1px 1px #ff9900;
+	color: #FFF;
+}
+/*----------------
+	main
+------------------*/
+#main {
+	margin:0 auto;
+	font-size:13px;
+	color:#4d4444;
+	text-shadow:1px 1px 1px #fff;
+	text-align:center;
+}
+section h2 {
+	top:50px;
+	font-size:50px;
+	color:#806c4d;
+}
+/*----------------
+	footer
+------------------*/
+#footer {
+	position: relative;
+	color:#F96;
+	font-size:10px;
+	margin-top:10px;
+	text-align:center;
+}
+}
+

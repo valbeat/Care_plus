@@ -1,0 +1,13 @@
+/*================
+ 	Design
+==================*/
+body {
+	background: url(../img/bg/bg.jpg) #f5f3e2;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #333;
+}
+.orange {
+	color:#FF6600;
+}

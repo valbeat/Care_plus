@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>form</title>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.simplemodal-1.4.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var auth = jQuery.cookie('auth');
+    if(auth !== "correct"){
+        confirm();
+    }
+});
+ 
+function confirm(){
+    jQuery('#modal').modal({
+        opacity:80,
+        overlayCss:{backgroundColor:"#000"},
+        containerId: 'confirm_modal',
+        position: ["30%",],
+        onShow: function(dialog){
+            var modal = this;
+            jQuery('.correct',dialog.data[0]).click(function(){
+                var clifetime = new Date();
+                clifetime.setTime(clifetime.getTime()+(2*60*60*1000));//2時間
+                jQuery.cookie('auth','correct',{ expires: clifetime });
+                modal.close();
+            });
+        }
+    });
+}
+</script>
+<link rel="stylesheet" href="css/form.css" />
+</head>
+<body>
+<div id="modal">
+<p>認証コードを入力してください</p>
+<form action="registerDevices.php">
+<p><input type="text"><input type="submit" value="送信"></p>
+</form>
+</div>
+<!-- /modal -->
+</body>
+</html>
